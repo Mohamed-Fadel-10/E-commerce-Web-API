@@ -1,0 +1,15 @@
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\bin\Debug\net6.0\E-commerceAPI.Entities.deps.json
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\bin\Debug\net6.0\E-commerceAPI.Entities.runtimeconfig.json
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\bin\Debug\net6.0\E-commerceAPI.Entities.dll
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\bin\Debug\net6.0\E-commerceAPI.Entities.pdb
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.csproj.AssemblyReference.cache
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.AssemblyInfoInputs.cache
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.AssemblyInfo.cs
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.csproj.CoreCompileInputs.cache
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.dll
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\refint\E-commerceAPI.Entities.dll
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.pdb
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.genruntimeconfig.cache
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\ref\E-commerceAPI.Entities.dll
+D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.sourcelink.json
