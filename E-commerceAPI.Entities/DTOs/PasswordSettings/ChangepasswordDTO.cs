@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_commerceAPI.Entities.DTOs.LogIn
+namespace E_commerceAPI.Entities.DTOs.PasswordSettings
 {
-    public class LogInDTO
+    public  class ChangepasswordDTO
     {
         [Required]
-        public string UserName { get; set; }
+        public string CurrentPassword { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string NewPassword { get; set; }
     }
 }

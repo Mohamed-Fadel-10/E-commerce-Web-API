@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using E_commerceAPI.Entities.Models.JWT_Token;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,6 +17,7 @@ namespace E_commerceAPI.Entities.Models
         [Required, MaxLength(15)]
         public string LastName { get; set; }
         public virtual IEnumerable<Order> Orders { get; set; }
+        public List<RefreshToken>? RefreshTokens  { get; set; }
 
     }
 }

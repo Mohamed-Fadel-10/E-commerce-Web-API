@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_commerceAPI.Entities.DTOs.LogIn
+namespace E_commerceAPI.Entities.DTOs.EmailSettingsDTOs
 {
-    public class LogInDTO
+    public class WelcomeRequestDTO
     {
         [Required]
         public string UserName { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string Email { get; set; }
+
     }
 }

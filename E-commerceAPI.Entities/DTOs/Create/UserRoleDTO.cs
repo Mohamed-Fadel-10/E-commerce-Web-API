@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace E_commerceAPI.Entities.DTOs.LogIn
+namespace E_commerceAPI.Entities.DTOs.Create
 {
-    public class LogInDTO
+    public class UserRoleDTO
     {
         [Required]
         public string UserName { get; set; }
         [Required]
-        public string Password { get; set; }
+        public string  RoleName { get; set; }
     }
 }
