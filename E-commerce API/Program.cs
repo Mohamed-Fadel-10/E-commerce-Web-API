@@ -88,10 +88,12 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
     .AddEntityFrameworkStores<Context>()
     .AddDefaultTokenProviders()
     .AddSignInManager<SignInManager<ApplicationUser>>();
-
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddTransient<IMailService, MailingService>();
 builder.Services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped(typeof(ICurdRepository<>),typeof(CurdRepository<>));
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("EmailConfiguration"));
 var app = builder.Build();
 
