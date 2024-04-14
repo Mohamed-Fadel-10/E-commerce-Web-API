@@ -1,0 +1,317 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|d:\\my_courses_coding\\web_api_vs_code\\e-commerceapi\\e-commerceapi.services\\repositories\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:e-commerceapi.services\\repositories\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|d:\\my_courses_coding\\web_api_vs_code\\e-commerceapi\\e-commerceapi.services\\repositories\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:e-commerceapi.services\\repositories\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.services\\repositories\\interfaces\\icurdrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:e-commerceapi.services\\repositories\\interfaces\\icurdrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.services\\repositories\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:e-commerceapi.services\\repositories\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E19A29-08A0-4525-92DB-5780EA0E8B5B}|E-commerce API\\E-commerceAPI.csproj|d:\\my_courses_coding\\web_api_vs_code\\e-commerceapi\\e-commerce api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E19A29-08A0-4525-92DB-5780EA0E8B5B}|E-commerce API\\E-commerceAPI.csproj|solutionrelative:e-commerce api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.services\\repositories\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:e-commerceapi.services\\repositories\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.entities\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|solutionrelative:e-commerceapi.entities\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.entities\\models\\products_carts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|solutionrelative:e-commerceapi.entities\\models\\products_carts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07E19A29-08A0-4525-92DB-5780EA0E8B5B}|E-commerce API\\E-commerceAPI.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerce api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07E19A29-08A0-4525-92DB-5780EA0E8B5B}|E-commerce API\\E-commerceAPI.csproj|solutionrelative:e-commerce api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.services\\repositories\\services\\curdrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:e-commerceapi.services\\repositories\\services\\curdrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.entities\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|solutionrelative:e-commerceapi.entities\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.entities\\models\\jwt_token\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|solutionrelative:e-commerceapi.entities\\models\\jwt_token\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.services\\data\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:e-commerceapi.services\\data\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.services\\repositories\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:e-commerceapi.services\\repositories\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\e-commerceapi.entities\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5B69673-2C23-4888-81FD-FE3EAA3464A2}|E-commerceAPI.Entities\\E-commerceAPI.Entities.csproj|solutionrelative:e-commerceapi.entities\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Migrations\\20240414012517_addOrderItemsAndProductCar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38DCD6AF-FB2C-425D-90A8-DC3B11863492}|E-commerceAPI.Services\\E-commerceAPI.Services.csproj|solutionrelative:E-commerceAPI.Services\\Migrations\\20240414012517_addOrderItemsAndProductCar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Repositories\\Interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Interfaces\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:18:31.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Repositories\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T17:18:28.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CurdRepository.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Services\\CurdRepository.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Repositories\\Services\\CurdRepository.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Services\\CurdRepository.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Services\\CurdRepository.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAwwE8AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T01:41:32.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Context.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Data\\Context.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Data\\Context.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Data\\Context.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Data\\Context.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwDcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T01:22:59.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Repositories\\Interfaces\\IProductService.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Interfaces\\IProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T00:42:00.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Entities\\Models\\Product.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\Product.cs",
+              "RelativeToolTip": "E-commerceAPI.Entities\\Models\\Product.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAwBUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T00:38:51.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Repositories\\Services\\AuthService.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Services\\AuthService.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Services\\AuthService.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAMwKcAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T00:25:24.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Repositories\\Services\\ProductService.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Services\\ProductService.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Services\\ProductService.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAUwC8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T00:00:39.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Entities\\Models\\Order.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\Order.cs",
+              "RelativeToolTip": "E-commerceAPI.Entities\\Models\\Order.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T17:41:16.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerce API\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "E-commerce API\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerce API\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "E-commerce API\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T17:27:59.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICurdRepository.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Interfaces\\ICurdRepository.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Repositories\\Interfaces\\ICurdRepository.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Repositories\\Interfaces\\ICurdRepository.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Interfaces\\ICurdRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T01:47:21.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Products_Carts.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\Products_Carts.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Entities\\Models\\Products_Carts.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\Products_Carts.cs",
+              "RelativeToolTip": "E-commerceAPI.Entities\\Models\\Products_Carts.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T17:36:18.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerce API\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "E-commerce API\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerce API\\Controllers\\CartController.cs",
+              "RelativeToolTip": "E-commerce API\\Controllers\\CartController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T02:57:19.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Entities\\Models\\Cart.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\Cart.cs",
+              "RelativeToolTip": "E-commerceAPI.Entities\\Models\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T17:36:12.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20240414012517_addOrderItemsAndProductCar.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Migrations\\20240414012517_addOrderItemsAndProductCar.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Services\\Migrations\\20240414012517_addOrderItemsAndProductCar.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Services\\Migrations\\20240414012517_addOrderItemsAndProductCar.cs",
+              "RelativeToolTip": "E-commerceAPI.Services\\Migrations\\20240414012517_addOrderItemsAndProductCar.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T01:25:18.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\JWT_Token\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "E-commerceAPI.Entities\\Models\\JWT_Token\\RefreshToken.cs",
+              "ToolTip": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\Models\\JWT_Token\\RefreshToken.cs",
+              "RelativeToolTip": "E-commerceAPI.Entities\\Models\\JWT_Token\\RefreshToken.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T01:26:35.859Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

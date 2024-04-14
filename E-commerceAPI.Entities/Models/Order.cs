@@ -25,7 +25,7 @@ namespace E_commerceAPI.Entities.Models
         public virtual ApplicationUser User { get; set; }
 
 
-
+            
 
     }
 }

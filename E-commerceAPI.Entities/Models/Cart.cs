@@ -15,6 +15,7 @@ namespace E_commerceAPI.Entities.Models
         public virtual ApplicationUser User { get; set; }
         [ForeignKey("User")]
         public string UserID { get; set; }
+        public DateTime CreatedOn { get; set; }
         public virtual IEnumerable<Products_Carts> Products_Carts { get; set; }
 
     }

@@ -19,6 +19,7 @@ namespace E_commerceAPI.Services.Repositories.Interfaces
         Task<Response> DeleteUserAsync(string userId);
         Task<Response> AddUserToRoleAsync(UserRoleDTO model);
         Task<Response> RemoveUserFromRoleAsync(UserRoleDTO model);
+        Task<ApplicationUser> GetCurrentUserAsync();
     }
 
 }

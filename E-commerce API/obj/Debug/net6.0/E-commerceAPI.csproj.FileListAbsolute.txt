@@ -563,3 +563,4 @@ D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerce API\obj\Debug\net6
 D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerce API\obj\Debug\net6.0\E-commerceAPI.genruntimeconfig.cache
 D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerce API\obj\Debug\net6.0\ref\E-commerceAPI.dll
 D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerce API\obj\Debug\net6.0\E-commer.4F2CB37E.Up2Date
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerce API\obj\Debug\net6.0\E-commerceAPI.sourcelink.json

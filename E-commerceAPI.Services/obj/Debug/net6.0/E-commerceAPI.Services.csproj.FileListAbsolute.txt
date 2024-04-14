@@ -16,3 +16,21 @@ D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Services\obj\D
 D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.genruntimeconfig.cache
 D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Services\obj\Debug\net6.0\ref\E-commerceAPI.Services.dll
 D:\My_Courses_Coding\Web Api Vs Code\E-commerce API\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.sourcelink.json
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\bin\Debug\net6.0\E-commerceAPI.Services.deps.json
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\bin\Debug\net6.0\E-commerceAPI.Services.runtimeconfig.json
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\bin\Debug\net6.0\E-commerceAPI.Services.dll
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\bin\Debug\net6.0\E-commerceAPI.Services.pdb
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\bin\Debug\net6.0\E-commerceAPI.Entities.dll
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\bin\Debug\net6.0\E-commerceAPI.Entities.pdb
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.csproj.AssemblyReference.cache
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.AssemblyInfoInputs.cache
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.AssemblyInfo.cs
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.csproj.CoreCompileInputs.cache
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.dll
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\refint\E-commerceAPI.Services.dll
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.pdb
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.genruntimeconfig.cache
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\ref\E-commerceAPI.Services.dll
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commer.AD8B16E0.Up2Date
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Services\obj\Debug\net6.0\E-commerceAPI.Services.sourcelink.json

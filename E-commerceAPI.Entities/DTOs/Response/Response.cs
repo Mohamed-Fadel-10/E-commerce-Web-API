@@ -13,5 +13,7 @@ namespace E_commerceAPI.Entities.DTOs.Response
         public int StatusCode { get; set; }
         public object? Model { get; set; }
         public bool isDone { get; set; } = false;
+        public List<string>? Errors { get; set; }
+        public List<string>? Items { get; set;}
     }
 }

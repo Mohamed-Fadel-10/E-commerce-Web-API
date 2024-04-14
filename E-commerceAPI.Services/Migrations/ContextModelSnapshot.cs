@@ -105,6 +105,9 @@ namespace E_commerceAPI.Services.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("UserID")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -259,7 +262,7 @@ namespace E_commerceAPI.Services.Migrations
 
                     b.HasIndex("ProductID");
 
-                    b.ToTable("Products_Carts");
+                    b.ToTable("ProductsCarts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
