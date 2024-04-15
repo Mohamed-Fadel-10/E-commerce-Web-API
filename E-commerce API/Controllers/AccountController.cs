@@ -130,7 +130,6 @@ namespace E_commerce_API.Controllers
             return Ok("Mail Send Successfully");
         }
 
-
         [HttpPost("Change Password")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> ChangePasswordAsync(ChangepasswordDTO model)

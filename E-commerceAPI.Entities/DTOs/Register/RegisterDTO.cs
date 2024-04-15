@@ -21,9 +21,9 @@ namespace E_commerceAPI.Entities.DTOs.Register
         public string UserName  { get; set; }
         [Required, MaxLength(15)]
         public string Password { get; set; }
+
         [Required, MaxLength(15),Compare("Password")]
         public string ConfirmPassword { get; set; }
-        public string[] Roles { get; set; }
 
 
     }

@@ -65,19 +65,13 @@ namespace E_commerceAPI.Services.Repositories.Services
             IdentityResult result = await _userManager.CreateAsync(User, model.ConfirmPassword);
             if (result.Succeeded)
             {
-                List<string> Roles = new List<string>();
-                foreach (var item in model.Roles)
-                {
-                    Roles.Add(item);
-                }
-                await _userManager.AddToRolesAsync(User, Roles);
+                
                 return new Authuntication
                 {
                     Message = "The User Created Successfully",
                     IsAuthenticated = true,
                     UserName = User.UserName,
                     Email = User.Email,
-                    Roles = Roles
                 };
             }
             else
@@ -136,7 +130,7 @@ namespace E_commerceAPI.Services.Repositories.Services
                         audience: _configuration["JWT:audience"],
                         claims: claims,
                         signingCredentials: credentials,
-                        expires: DateTime.Now.AddDays(7)
+                        expires: DateTime.Now.AddDays(1)
                  );
 
                     return new Token 

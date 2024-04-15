@@ -27,3 +27,4 @@ D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Entities\obj\De
 D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.pdb
 D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.genruntimeconfig.cache
 D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Entities\obj\Debug\net6.0\ref\E-commerceAPI.Entities.dll
+D:\My_Courses_Coding\Web_Api_Vs_Code\E-commerceAPI\E-commerceAPI.Entities\obj\Debug\net6.0\E-commerceAPI.Entities.sourcelink.json
