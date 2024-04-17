@@ -153,13 +153,22 @@ namespace E_commerceAPI.Services.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime>("OrderDate")
+                    b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DeliveredOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDone")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasMaxLength(11)
                         .HasColumnType("nvarchar(11)");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserID")
                         .IsRequired()
@@ -183,9 +192,6 @@ namespace E_commerceAPI.Services.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
-
-                    b.Property<double>("Discount")
-                        .HasColumnType("float");
 
                     b.Property<int>("OrderId")
                         .HasColumnType("int");

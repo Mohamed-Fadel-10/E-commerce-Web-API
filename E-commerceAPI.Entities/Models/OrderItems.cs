@@ -19,7 +19,6 @@ namespace E_commerceAPI.Entities.Models
         [ForeignKey("Product")]
         public int ProductId { get; set; }
         public decimal TotalPrice { get; set; }
-        public double Discount { get; set; }
         public int Quantity { get; set; }
 
     }

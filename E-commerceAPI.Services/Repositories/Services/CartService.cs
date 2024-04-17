@@ -58,7 +58,7 @@ namespace E_commerceAPI.Services.Repositories.Services
         public async Task<Response> RemoveCartProductAsync(int id)
         {
             var isProductExist= await _context.ProductsCarts.FirstOrDefaultAsync(p=>p.ProductID==id);
-            if (isProductExist == null)
+            if (isProductExist is  null)
             {
                 return new Response() { Message = "This Product ID Not in this Cart", StatusCode = 404, isDone = false };
             }
