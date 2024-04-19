@@ -98,8 +98,7 @@
               "RelativeToolTip": "E-commerceAPI.Entities\\DTOs\\OrderDetails.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T05:10:16.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T05:10:16.148Z"
             },
             {
               "$type": "Document",
@@ -111,8 +110,7 @@
               "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Services\\ProductService.cs",
               "ViewState": "AQIAADsAAAAAAAAAAAAgwEUAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T02:58:09.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T02:58:09.111Z"
             },
             {
               "$type": "Document",
@@ -124,8 +122,7 @@
               "RelativeToolTip": "E-commerceAPI.Entities\\Models\\OrderItems.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAAwA8AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T01:46:05.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T01:46:05.694Z"
             },
             {
               "$type": "Document",
@@ -174,8 +171,7 @@
               "RelativeToolTip": "E-commerceAPI.Entities\\DTOs\\Create\\OrderDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T01:49:26.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T01:49:26.495Z"
             },
             {
               "$type": "Document",
@@ -187,8 +183,7 @@
               "RelativeToolTip": "E-commerceAPI.Entities\\Models\\Order.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAqwA8AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T00:35:16.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T00:35:16.181Z"
             },
             {
               "$type": "Document",
@@ -200,8 +195,7 @@
               "RelativeToolTip": "E-commerce API\\Controllers\\OrderController.cs",
               "ViewState": "AQIAADYAAAAAAAAAAAAgwEAAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T05:44:19.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-15T05:44:19.744Z"
             },
             {
               "$type": "Document",
@@ -213,8 +207,7 @@
               "RelativeToolTip": "E-commerceAPI.Services\\Repositories\\Interfaces\\IOrderItemsService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T00:23:53.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T00:23:53.541Z"
             }
           ]
         }
