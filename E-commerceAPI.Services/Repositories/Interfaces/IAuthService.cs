@@ -10,16 +10,11 @@ namespace E_commerceAPI.Services.Repositories.Interfaces
 {
     public interface IAuthService
     {
-        Task<Authuntication> Register(RegisterDTO model);
-        Task<Response> CreateRoleAsync(string addRole);
-        Task<Token> LogIn(LogInDTO model);
-        Task<Response> LogoutAsync();
-        Task<Authuntication> ChangePasswordAsync(ChangepasswordDTO model);
-        Task<Response> DeleteRole(string RoleID);
-        Task<Response> DeleteUserAsync(string userId);
-        Task<Response> AddUserToRoleAsync(UserRoleDTO model);
-        Task<Response> RemoveUserFromRoleAsync(UserRoleDTO model);
-        Task<ApplicationUser> GetCurrentUserAsync();
+        public Task<Authuntication> Register(RegisterDTO model);
+        public Task<Authuntication> LogIn(LogInDTO model);
+        public Task<Authuntication> NewRefreshToken(string token);
+        public Task<Response> LogoutAsync();
+        public Task<ApplicationUser> GetCurrentUserAsync();
     }
 
 }

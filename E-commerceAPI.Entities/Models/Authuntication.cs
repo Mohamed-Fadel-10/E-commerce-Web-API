@@ -15,7 +15,10 @@ namespace E_commerceAPI.Entities.Models
 
         public bool IsAuthenticated { get; set; } = false;
         public List<string> Roles { get; set; }
+        public string Token { get; set; }
+        public string? RefreshToken { get; set; }
 
+        public DateTime RefreshTokenExpiration { get; set; }
 
     }
 }

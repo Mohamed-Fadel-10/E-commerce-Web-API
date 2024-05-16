@@ -82,80 +82,154 @@ namespace E_commerceAPI.Services.Repositories.Services
             }
         }
 
-        public async Task<Response> CreateRoleAsync(string Role)
+        public async Task<Authuntication> LogIn(LogInDTO model)
         {
-            if (await _roleManager.RoleExistsAsync(Role))
-                return new Response { Message = "Role Already Created Before", StatusCode = 409,isDone= false };
-            IdentityRole identityRole = new IdentityRole(Role);
-            var result = await _roleManager.CreateAsync(identityRole);
-            if (result.Succeeded)
+            var User = await _userManager.FindByNameAsync(model.UserName);
+            if (User is not null)
             {
-                return new Response { Message = "Role Created Successfully", StatusCode = 201, isDone = true };
+               var isFound = await _userManager.CheckPasswordAsync(User, model.Password);
+                
+                if (isFound)
+                {
+                    var Token = await CreateToken(User);
+                    var Roles = await _userManager.GetRolesAsync(User);
+                    var RefreshToken = "";
+                    DateTime RefreshTokenExpireDate;
+
+                    if (User.RefreshTokens!.Any(t => t.IsActive))
+                    {
+                        var ActiveRefreshToken = User.RefreshTokens.FirstOrDefault(t => t.IsActive);
+                        RefreshToken = ActiveRefreshToken!.Token;
+                        RefreshTokenExpireDate = ActiveRefreshToken.ExpiresOn;
+                    }
+                    else
+                    {
+                        var RefreshTokenObj = CreateRefreshToken();
+                        RefreshToken = RefreshTokenObj.Token;
+                        RefreshTokenExpireDate = RefreshTokenObj.ExpiresOn;
+                        User.RefreshTokens.Add(RefreshTokenObj);
+                        await _userManager.UpdateAsync(User);
+                    }
+
+                    return new Authuntication
+                    {
+                        IsAuthenticated = true,
+                        UserName = User.UserName,
+                        Email = User.Email,
+                        Message = $"Welcome {User.UserName}",
+                        Roles = Roles.ToList(),
+                        Token = new JwtSecurityTokenHandler().WriteToken(Token),
+                        RefreshToken = RefreshToken
+                    };
+                }
+                return new Authuntication
+                {
+                    IsAuthenticated = false,
+                    UserName = string.Empty,
+                    Email = string.Empty,
+                    Message = $"Invalid Password",
+                    Roles = new List<string>(),
+                    Token = string.Empty,
+                };
+
             }
-            return new Response { Message = "Role Created Failed", StatusCode = 400 ,isDone = false };
+            return new Authuntication
+            {
+                IsAuthenticated = false,
+                UserName = string.Empty,
+                Email = string.Empty,
+                Message = $"User name Or Password Is Not Correct",
+                Roles = new List<string>(),
+                Token = string.Empty,
+            };
         }
 
-
-        public async Task<Token> LogIn(LogInDTO model)
+        public async Task<Authuntication> NewRefreshToken(string token)
         {
-            var user = await _userManager.FindByNameAsync(model.UserName);
-            if (user != null)
+            var authModel = new Authuntication();
+
+            var user = _userManager.Users.SingleOrDefault(u => u.RefreshTokens.Any(t => t.Token == token));
+            if (user == null)
             {
-                bool Found = await _userManager.CheckPasswordAsync(user, model.Password);
-                if (Found)
-                {
+                authModel.IsAuthenticated = false;
+                authModel.Message = "Invaild Token";
 
-                    var roles = await _userManager.GetRolesAsync(user);
-                    var userClaims = await _userManager.GetClaimsAsync(user);
-                    var roleClaims = new List<Claim>();
-                    roleClaims.AddRange(roles.Select(r => new Claim("roles", r)).ToList());
-
-                    var claims = new[]
-                    {
-                         new Claim(ClaimTypes.Name, user.UserName),
-                         new Claim(ClaimTypes.NameIdentifier, user.Id),
-                         new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                         new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                         new Claim("uid", user.Id)
-                     }
-                    .Union(userClaims)
-                    .Union(roleClaims);
-
-                    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
-                    var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-                    var token = new JwtSecurityToken(
-                        issuer: _configuration["JWT:issuer"],
-                        audience: _configuration["JWT:audience"],
-                        claims: claims,
-                        signingCredentials: credentials,
-                        expires: DateTime.Now.AddDays(1)
-                 );
-
-                    return new Token 
-                    {
-                        token = new JwtSecurityTokenHandler().WriteToken(token),
-                        ExpireOn = token.ValidTo ,
-                        Message="LogIn Successfully",
-                        IsAuthenticated=true
-                    };
-                }
-                else
-                {
-                    return new Token { token = string.Empty,
-                        ExpireOn = DateTime.Now ,
-                        Message = "User Not Found",
-                        IsAuthenticated = false 
-                    };
-                }
+                return authModel;
             }
-            return new Token 
-            {   token = string.Empty ,
-                Message = "User name Or Password Is Not Correct" ,
-                IsAuthenticated=false
-            };
 
+            var refreshToken = user.RefreshTokens.Single(t => t.Token == token);
+
+            if (!refreshToken.IsActive)
+            {
+                return new Authuntication
+                {
+                    IsAuthenticated = false,
+                    UserName = string.Empty,
+                    Email = string.Empty,
+                    Message = "InActive Token",
+                    Roles = new List<string>(),
+                    Token = string.Empty,
+                };
+            }
+
+            refreshToken.RevokeOn = DateTime.UtcNow;
+            var newRefreshToken = CreateRefreshToken();
+            user.RefreshTokens.Add(newRefreshToken);
+            await _userManager.UpdateAsync(user);
+            var Roles = await _userManager.GetRolesAsync(user);
+            var jwtToken = await CreateToken(user);
+
+            return new Authuntication
+            {
+                IsAuthenticated = true,
+                UserName = user.UserName,
+                Email = string.Empty,
+                Message = "Active Token",
+                Roles = Roles.ToList(),
+                Token = new JwtSecurityTokenHandler().WriteToken(jwtToken),
+                RefreshToken = newRefreshToken.Token,
+                RefreshTokenExpiration = newRefreshToken.ExpiresOn
+            };
+        }
+        private async Task<JwtSecurityToken> CreateToken(ApplicationUser User)
+        {
+            var claims = new List<Claim>
+                      {
+                     new Claim(ClaimTypes.Name, User.UserName),
+                     new Claim(ClaimTypes.NameIdentifier, User.Id),
+                     new Claim(JwtRegisteredClaimNames.Sub, User.UserName),
+                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                     new Claim(JwtRegisteredClaimNames.Email, User.Email!),
+                     new Claim("uid", User.Id)
+                     };
+            var roles = await _userManager.GetRolesAsync(User);
+            foreach (var role in roles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, role));
+            }
+            SecurityKey Key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
+            SigningCredentials signingCred = new SigningCredentials(Key, SecurityAlgorithms.HmacSha256);
+            var Token = new JwtSecurityToken(
+                issuer: _configuration["JWT:issuer"],
+                audience: _configuration["JWT:audience"],
+                claims: claims,
+                signingCredentials: signingCred,
+                expires: DateTime.Now.AddHours(5)
+                );
+            return Token;
+        }
+        private RefreshToken CreateRefreshToken()
+        {
+            var RandomNumber = new byte[32];
+            using var generator = new RNGCryptoServiceProvider();
+            generator.GetBytes(RandomNumber);
+
+            return new RefreshToken
+            {
+                Token = Convert.ToBase64String(RandomNumber),
+                ExpiresOn = DateTime.UtcNow.AddDays(10),
+                CreatedOn = DateTime.UtcNow,
+            };
         }
         public async Task<ApplicationUser> GetCurrentUserAsync()
         {
@@ -164,127 +238,19 @@ namespace E_commerceAPI.Services.Repositories.Services
             return await _userManager.GetUserAsync(userIdClaim);
         }
 
-        public async Task<Authuntication> ChangePasswordAsync(ChangepasswordDTO model)
-        {
-            try
-            {
-                var Autho = new Authuntication();
-                var user = await GetCurrentUserAsync();
-                if (user is null)
-                {
-                    return new Authuntication { Message = "User Not Found" };
-                }
-                if (!await _userManager.CheckPasswordAsync(user, model.CurrentPassword))
-                {
-                    return new Authuntication { Message = "Invalid Password" };
-                }
-                IdentityResult result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
-                if (result.Succeeded)
-                {
-                    Autho.Message = "Password Changed Successfully";
-                    Autho.IsAuthenticated = true;
-                    Autho.Email = user.Email;
-                    Autho.UserName = user.UserName;
-                }
-                else
-                {
-                    Autho.Message = "Password Changed Successfully";
-                    Autho.IsAuthenticated = false;
-                    Autho.Email = user.Email;
-                    Autho.UserName = user.UserName;
-                }
-                return Autho;
-            }
-            catch (Exception ex)
-            {
-                return new Authuntication { Message = $" Failed To Change Password , {ex.Message}" };
-            }
-
-        }
-        public async Task<Response> DeleteRole(string RoleID)
-        {
-            try
-            {
-                var role = await _roleManager.FindByIdAsync(RoleID);
-                if(role is null)
-                {
-                    return new Response { Message = "Role Not Found" ,StatusCode=404,isDone=false};
-                }
-                await _roleManager.DeleteAsync(role);
-                return new Response { Message = "Role Deleted Successfully", StatusCode = 200 , isDone=true };
-            }
-            catch (Exception ex)
-            {
-                return new Response { Message = $"Cannot Delete Role {ex.Message} ", StatusCode = 400,isDone= false };
-            }
-
-        }
-        public async Task<Response> DeleteUserAsync(string userId)
-        {
-            try
-            {
-              var user = await _userManager.FindByIdAsync(userId);
-                if(user is null)
-                {
-                    return new Response { Message = "User Not Found", StatusCode = 404 , isDone = false };
-                }
-                await _userManager.DeleteAsync(user);
-                return new Response { Message = "User Deleted Successfully", StatusCode = 200, isDone = true };
-
-            }
-            catch (Exception ex)
-            {
-                return new Response { Message = $"Cannot Delete this User {ex.Message} ", StatusCode = 400,isDone=false };
-            }
-
-        }
-        public async Task<Response> AddUserToRoleAsync(UserRoleDTO model)
-        {
-           var user= await _userManager.FindByNameAsync(model.UserName);
-            if (user is not null)
-            {
-                var IsinRole = await _userManager.IsInRoleAsync(user, model.RoleName);
-                if (IsinRole == true)
-                {
-                    return new Response { Message="User is Already in this Role",StatusCode=409,isDone=false};
-                }
-                var role=  await _roleManager.FindByNameAsync(model.RoleName);
-                if(role is null)
-                {
-                    return new Response { Message = "this Role Not Found", StatusCode = 404, isDone = false };
-                }
-                await _userManager.AddToRoleAsync(user, model.RoleName);
-                return new Response { Message = $"{model.RoleName} Role Added To User Successfully ", StatusCode = 200, isDone = true };
-            }
-                return new Response { Message = $"{model.RoleName} User Name Not Found ", StatusCode = 200, isDone = false };
-
-        }
-        public async Task<Response> RemoveUserFromRoleAsync(UserRoleDTO model)
-        {
-          
-            var user = await _userManager.FindByNameAsync(model.UserName);
-            if (user is not null)
-            {
-                var IsinRole = await _userManager.IsInRoleAsync(user, model.RoleName);
-                if (IsinRole is false)
-                {
-                    return new Response { Message = "User Not in this Role", StatusCode = 404, isDone = false };
-                }
-                await _userManager.RemoveFromRoleAsync(user, model.RoleName);
-                return new Response { Message = $"{model.RoleName} Role Deleted From User Successfully ", StatusCode = 200, isDone = true };
-            }
-            return new Response { Message = $"{model.RoleName} User Name Not Found", StatusCode = 404, isDone = false };
-
-        }
         public async Task<Response> LogoutAsync()
         {
-            if (GetCurrentUserAsync() is null)
+            var currentUser = await GetCurrentUserAsync();
+
+            if (currentUser == null)
             {
-                return new Response { Message = "UnAuthorized user ", StatusCode = 401 ,isDone=false};
+                return new Response { Message = "Unauthorized user", StatusCode = 401, isDone = false };
             }
-            await _signInManager.SignOutAsync();
-            return new Response { Message = "User Logged Out Successfully", StatusCode = 200 ,isDone=true};
+
+            await  _signInManager.SignOutAsync();
+            return new Response { Message = "User logged out successfully", StatusCode = 200, isDone = true };
         }
+
 
 
 

@@ -11,7 +11,7 @@ namespace E_commerceAPI.Entities.Models.JWT_Token
     {
         public string token { get; set; }
 
-        public DateTime ExpireOn { get; set; }
+       public DateTime ExpireOn { get; set; }
 
         public string Message { get; set; } = string.Empty;
         [JsonIgnore]

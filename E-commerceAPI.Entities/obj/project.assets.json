@@ -10414,7 +10414,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Windows 10\\.nuget\\packages\\": {},
-    "F:\\Dev Express Setup\\Components\\Offline Packages": {}
+    "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -10426,7 +10426,7 @@
       "outputPath": "D:\\My_Courses_Coding\\Web_Api_Vs_Code\\E-commerceAPI\\E-commerceAPI.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "F:\\Dev Express Setup\\Components\\Offline Packages"
+        "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"
       ],
       "configFilePaths": [
         "C:\\Users\\Windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10438,7 +10438,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "F:\\Dev Express Setup\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
