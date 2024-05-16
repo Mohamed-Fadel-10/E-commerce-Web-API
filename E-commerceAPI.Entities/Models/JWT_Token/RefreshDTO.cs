@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EMS_SYSTEM.DOMAIN.DTO.NewFolder
+namespace E_commerceAPI.Models
 {
     public class RefreshDTO
     {
