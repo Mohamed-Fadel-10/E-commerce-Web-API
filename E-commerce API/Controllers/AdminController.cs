@@ -76,22 +76,7 @@ namespace E_commerce_API.Controllers
             return Ok("Mail Send Successfully");
         }
 
-        [HttpPost("Change Password")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public async Task<IActionResult> ChangePasswordAsync(ChangepasswordDTO model)
-        {
-            if (ModelState.IsValid)
-            {
-                var Response = await _adminService.ChangePasswordAsync(model);
-                if (Response.IsAuthenticated == true)
-                {
-                    return StatusCode(StatusCodes.Status200OK, Response.Message);
-                }
-                return StatusCode(StatusCodes.Status400BadRequest, Response.Message);
-            }
-            return BadRequest("Failed Process To Change Password");
-
-        }
+       
 
 
         [HttpDelete("RemoveRoleFromUser")]

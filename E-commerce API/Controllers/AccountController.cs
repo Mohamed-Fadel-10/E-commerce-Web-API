@@ -1,7 +1,9 @@
 ﻿using E_commerceAPI.Entities.DTOs.LogIn;
+using E_commerceAPI.Entities.DTOs.PasswordSettings;
 using E_commerceAPI.Entities.DTOs.Register;
+using E_commerceAPI.Models;
 using E_commerceAPI.Services.Repositories.Interfaces;
-using EMS_SYSTEM.DOMAIN.DTO.NewFolder;
+using E_commerceAPI.Services.Repositories.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -71,6 +73,23 @@ namespace E_commerce_API.Controllers
                 return BadRequest(new { Response.Message });
             }
             return BadRequest(ModelState);
+        }
+
+        [HttpPost("Change Password")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<IActionResult> ChangePasswordAsync(ChangepasswordDTO model)
+        {
+            if (ModelState.IsValid)
+            {
+                var Response = await _authService.ChangePasswordAsync(model);
+                if (Response.IsAuthenticated == true)
+                {
+                    return StatusCode(StatusCodes.Status200OK, Response.Message);
+                }
+                return StatusCode(StatusCodes.Status400BadRequest, Response.Message);
+            }
+            return BadRequest("Failed Process To Change Password");
+
         }
 
         [HttpPost("LogOut")]

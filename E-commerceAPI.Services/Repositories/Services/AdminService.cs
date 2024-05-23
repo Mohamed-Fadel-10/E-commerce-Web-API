@@ -45,43 +45,6 @@ namespace E_commerceAPI.Services.Repositories.Services
         }
 
 
-        public async Task<Authuntication> ChangePasswordAsync(ChangepasswordDTO model)
-        {
-            try
-            {
-                var Autho = new Authuntication();
-                var user = await _authService.GetCurrentUserAsync();
-                if (user is null)
-                {
-                    return new Authuntication { Message = "User Not Found" };
-                }
-                if (!await _userManager.CheckPasswordAsync(user, model.CurrentPassword))
-                {
-                    return new Authuntication { Message = "Invalid Password" };
-                }
-                IdentityResult result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
-                if (result.Succeeded)
-                {
-                    Autho.Message = "Password Changed Successfully";
-                    Autho.IsAuthenticated = true;
-                    Autho.Email = user.Email;
-                    Autho.UserName = user.UserName;
-                }
-                else
-                {
-                    Autho.Message = "Password Changed Successfully";
-                    Autho.IsAuthenticated = false;
-                    Autho.Email = user.Email;
-                    Autho.UserName = user.UserName;
-                }
-                return Autho;
-            }
-            catch (Exception ex)
-            {
-                return new Authuntication { Message = $" Failed To Change Password , {ex.Message}" };
-            }
-
-        }
 
         public async Task<Response> DeleteRole(string RoleID)
         {

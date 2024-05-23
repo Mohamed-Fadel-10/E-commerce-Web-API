@@ -13,6 +13,8 @@ namespace E_commerceAPI.Services.Repositories.Interfaces
         public Task<Authuntication> Register(RegisterDTO model);
         public Task<Authuntication> LogIn(LogInDTO model);
         public Task<Authuntication> NewRefreshToken(string token);
+        public Task<Authuntication> ChangePasswordAsync(ChangepasswordDTO model);
+
         public Task<Response> LogoutAsync();
         public Task<ApplicationUser> GetCurrentUserAsync();
     }

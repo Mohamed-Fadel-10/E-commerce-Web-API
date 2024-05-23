@@ -21,6 +21,7 @@ using E_commerceAPI.Entities.DTOs.PasswordSettings;
 using Microsoft.AspNetCore.Mvc;
 using E_commerceAPI.Entities.DTOs.Response;
 using E_commerceAPI.Entities.DTOs.Create;
+using System.Data;
 
 namespace E_commerceAPI.Services.Repositories.Services
 {
@@ -65,14 +66,30 @@ namespace E_commerceAPI.Services.Repositories.Services
             IdentityResult result = await _userManager.CreateAsync(User, model.ConfirmPassword);
             if (result.Succeeded)
             {
-                
-                return new Authuntication
+                if (!await _roleManager.RoleExistsAsync("Admin"))
                 {
-                    Message = "The User Created Successfully",
-                    IsAuthenticated = true,
-                    UserName = User.UserName,
-                    Email = User.Email,
-                };
+                    IdentityRole identityRole = new IdentityRole("Admin");
+                    var roleCreation = await _roleManager.CreateAsync(identityRole);
+                    await _userManager.AddToRoleAsync(User, "Admin");
+                    return new Authuntication
+                    {
+                        Message = "The User Created Successfully",
+                        IsAuthenticated = true,
+                        UserName = User.UserName,
+                        Email = User.Email,
+                    };
+                }
+                else
+                {                 
+                    await _userManager.AddToRoleAsync(User, "user");
+                    return new Authuntication
+                    {
+                        Message = "The User Created Successfully",
+                        IsAuthenticated = true,
+                        UserName = User.UserName,
+                        Email = User.Email,
+                    };
+                }
             }
             else
             {
@@ -237,7 +254,43 @@ namespace E_commerceAPI.Services.Repositories.Services
 
             return await _userManager.GetUserAsync(userIdClaim);
         }
+        public async Task<Authuntication> ChangePasswordAsync(ChangepasswordDTO model)
+        {
+            try
+            {
+                var Autho = new Authuntication();
+                var user = await GetCurrentUserAsync();
+                if (user is null)
+                {
+                    return new Authuntication { Message = "User Not Found" };
+                }
+                if (!await _userManager.CheckPasswordAsync(user, model.CurrentPassword))
+                {
+                    return new Authuntication { Message = "Invalid Password" };
+                }
+                IdentityResult result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+                if (result.Succeeded)
+                {
+                    Autho.Message = "Password Changed Successfully";
+                    Autho.IsAuthenticated = true;
+                    Autho.Email = user.Email;
+                    Autho.UserName = user.UserName;
+                }
+                else
+                {
+                    Autho.Message = "Password Changed Successfully";
+                    Autho.IsAuthenticated = false;
+                    Autho.Email = user.Email;
+                    Autho.UserName = user.UserName;
+                }
+                return Autho;
+            }
+            catch (Exception ex)
+            {
+                return new Authuntication { Message = $" Failed To Change Password , {ex.Message}" };
+            }
 
+        }
         public async Task<Response> LogoutAsync()
         {
             var currentUser = await GetCurrentUserAsync();

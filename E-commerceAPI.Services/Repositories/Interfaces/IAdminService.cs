@@ -13,7 +13,6 @@ namespace E_commerceAPI.Services.Repositories.Interfaces
     public interface  IAdminService
     {
         Task<Response> CreateRoleAsync(string addRole);
-        Task<Authuntication> ChangePasswordAsync(ChangepasswordDTO model);
         Task<Response> DeleteRole(string RoleID);
         Task<Response> DeleteUserAsync(string userId);
         Task<Response> AddUserToRoleAsync(UserRoleDTO model);
