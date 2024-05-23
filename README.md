@@ -1,7 +1,7 @@
 # E-commerce API
 
 ## Overview
-Welcome to the E-commerce API built with ASP.NET 8. This API facilitates typical e-commerce operations such as managing products, categories, orders, users, and administrative tasks.
+Welcome to the E-commerce API built with ASP.NET 6. This API facilitates typical e-commerce operations such as managing products, categories, orders, users, and administrative tasks.
 
 ## Table of Contents
 1. [Getting Started](#getting-started)
@@ -18,7 +18,7 @@ Welcome to the E-commerce API built with ASP.NET 8. This API facilitates typical
 ## Getting Started
 
 ### Prerequisites
-- .NET 8 SDK
+- .NET 6 SDK
 - SQL Server 
 
 
